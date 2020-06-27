@@ -16,6 +16,8 @@ public class BeansClient {
 		  
 		  Employee empObj2 = containerObj.getBean("emp2", Employee.class);
 		  System.out.println(empObj2);
+		  
+		  int y = 90;
 		
 	}
 
