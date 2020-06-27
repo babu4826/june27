@@ -6,6 +6,7 @@ public class Address {
 	private String streetName;
 	private String city;
 	private int pinCode;
+	String course;
 	
 	public Address() {
 		 System.out.println("This is default constructor method of Address java class");
