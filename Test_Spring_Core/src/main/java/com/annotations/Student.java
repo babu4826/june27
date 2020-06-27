@@ -9,6 +9,7 @@ public class Student {
 	
 	private int rollNo;
 	private String name;
+	private char gender;
 	@Autowired
 	private Address address;
 	@Autowired
