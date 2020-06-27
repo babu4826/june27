@@ -6,6 +6,7 @@ public class Employee {
 	private String emplName;
 	private int salary;
 	private int bonus;
+	private int x;
 	
 	public Employee() {
 		
