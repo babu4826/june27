@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	 <!-- Address adrObj = new Address() -->
+	<bean class="com.bean.dependency.check.Address" id="adrObj">
+		 <property name="doorNo" value="1010"></property>
+		 <property name="streetName"  value="kphb"></property>
+		 <property name="city" value="hyd"></property>
+		 <property name="pinCode" value="500205"></property>
+	</bean>
+	
+	<bean class="com.bean.dependency.check.Icici" id="iciciObj">
+	
+	</bean>
+	
+	<bean class="com.bean.dependency.check.Student" id="stObj" dependency-check="none">
+	
+	</bean>
+	
+	<bean class="com.bean.dependency.check.Student"  id="stObj2"  dependency-check="simple">
+		 <property name="rollNo"  value="101"></property>
+		 <property name="name"  value="harsha"></property>
+		 <property name="gender" value="M"></property>
+	</bean>
+	
+	<bean class="com.bean.dependency.check.Student" id="stObj3" dependency-check="objects">
+			<property name="address" ref="adrObj"></property>
+			<property name="iciciObj" ref="iciciObj"></property>
+	</bean>
+	
+	<bean class="com.bean.dependency.check.Student" id="stObj4" dependency-check="all">
+		<property name="rollNo"  value="101"></property>
+		 <property name="name"  value="harsha"></property>
+		 <property name="gender" value="M"></property>
+		 <property name="address" ref="adrObj"></property>
+		<property name="iciciObj" ref="iciciObj"></property>
+	</bean>
+	
+</beans>

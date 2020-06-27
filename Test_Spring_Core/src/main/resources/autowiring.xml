@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd	
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+    
+    
+    <bean class="com.autowiring.Address" id="address">
+    
+    </bean>
+    
+    <bean class="com.autowiring.Address" id="adrObj2">
+    
+    </bean>
+    
+    <bean class="com.autowiring.Icici" id="iciciObj">
+    
+    </bean>
+    
+   <!--  <bean class="com.autowiring.Student" id="stObj">
+    	 <property name="address"  ref="address"></property>
+    	 <property name="atm" ref="atm"></property>
+    </bean>
+    
+    <bean class="com.autowiring.Student" id="stObj2" autowire="byName">
+    
+    </bean>
+     -->
+   <!--  <bean class="com.autowiring.Student" id="stObj3" autowire="byType" >
+    
+    </bean> -->
+    
+    <!-- byType  + byName -->
+    <bean class="com.autowiring.Student" id="stObj4" autowire="constructor">
+    
+    </bean>
+    
+    
+</beans>

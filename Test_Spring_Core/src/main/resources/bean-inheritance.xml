@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd	
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+    
+    
+    <bean class="com.bean.inheritance.Employee" id="empObj">
+    	 <property name="id" value="101"></property>
+    	 <property name="name" value="harsha"></property>
+    	 <property name="gender" value="M"></property>
+    </bean>
+    
+    <bean class="com.bean.inheritance.RegularEmployee" id="regEmpObj">
+    	  <property name="id" value="102"></property>
+    	  <property name="name" value="harika"></property>
+    	  <property name="gender" value="F"></property>
+    	  <property name="salary" value="5000"></property>
+    	  <property name="bonus" value="500"></property>
+    </bean>
+    
+    <bean class="com.bean.inheritance.RegularEmployee" id="regEmpObj2" parent="empObj">
+        <property name="salary" value="6000"></property>
+        <property name="bonus" value="600"></property>
+    </bean>
+    
+</beans>
